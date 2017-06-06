@@ -5,37 +5,6 @@
         <title>GSS - СПИСОК ЗАПУЩЕННЫХ ПЕРИОДОВ</title>
     </head>
     <body>
-        <h1>ТОВАРИЩЪ добавь новый ПЛАН</h1>
-        <form action="{% url 'create_plan' %}" method="post">>
-            {{ form.as_table}}
-            <input type="submit" value="Создать" />
-        </form>
-
-        <table>
-            <tr>
-                <th>Описание</th>
-                <th>Тип</th>
-                <th>BTS</th>
-                <th>ETS</th>
-                <th>Интервал</th>
-                <th>CTS</th>
-                <th>Статус</th>
-                <th>Ошибка</th>
-            </tr>
-            {% for plan in latest_plan_list %}
-                <tr>
-                    <td><a href="{% url 'detail' plan.id %}">{{ plan.description }}</a></td>
-                    <td>{{ plan.rectype }}</td>
-                    <td>{{ plan.BTS|date:"Y-m-d H:i:s" }}</td>
-                    <td>{{ plan.ETS|date:"Y-m-d H:i:s" }}</td>
-                    <td>{{ plan.interval }}</td>
-                    <td>{{ plan.CTS|date:"Y-m-d H:i:s" }}</td>
-                    <td>{{ plan.state }}</td>
-                    <td>{{ plan.error }}</td>
-                </tr>
-            {% empty %}
-                <tr>No plans are available.</tr>
-            {% endfor %}
-        </table>
+        <h1>Привет, АНЯ!</h1>
     </body>
 </html>
